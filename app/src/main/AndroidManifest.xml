@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="lhp.ducnt.demosecurityactivity">
+
+
+    <!-- *** POINT 1 InHouseActivity *** Define an in-house signature permission -->
+    <permission
+        android:name="lhp.ducnt.DUCNT_PERMISSION"
+        android:protectionLevel="signature"/>
+    <!-- android:protectionLevel="signature" -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".VisibilityPrivateNotificationActivity"
+            android:taskAffinity="com.test.ntd">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- *** POINT 1 PublicActivity *** Explicitly set the exported attribute to true. -->
+        <activity
+            android:name=".PublicActivity"
+            android:exported="true"
+
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <!-- Define intent filter to receive an implicit intent for a specified action -->
+            <intent-filter>
+                <action android:name="NTDACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- *** POINT 1 Private activity*** Do not specify taskAffinity -->
+        <!-- *** POINT 2 Private activity*** Do not specify launchMode -->
+        <!-- *** POINT 3 Private activity*** Explicitly set the exported attribute to false. -->
+        <activity
+            android:name=".PrivateActivity"
+            android:label="@string/app_name"
+            android:taskAffinity="com.test.lhp"
+            android:allowTaskReparenting="true"
+            />
+
+
+        <!-- PartnerActivity -->
+        <!--1. Do not specify taskAffinity.-->
+        <!--2. Do not specify launchMode.-->
+        <!--3. Do not define the intent filter and explicitly set the exported attribute to true.-->
+        <activity
+            android:name=".partner.PartnerActivity"
+            android:exported="true"
+            android:label="@string/app_name"/>
+
+
+        <!-- In-house Activity -->
+        <!-- *** POINT 2 *** Do not specify taskAffinity -->
+        <!-- *** POINT 3 *** Do not specify launchMode -->
+        <!-- *** POINT 4 *** Require the in-house signature permission -->
+        <!-- *** POINT 5 *** Do not define the intent filter and explicitly set the exported attribute to true -->
+        <activity
+            android:name=".inhouse.InHouseActivity"
+            android:exported="true"
+            android:permission="lhp.ducnt.DUCNT_PERMISSION" />
+
+        <!--Noti-->
+        <!--<activity-->
+            <!--android:name=".VisibilityPrivateNotificationActivity"-->
+            <!--android:exported="false"-->
+            <!--android:label="@string/app_name"/>-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher"/>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <service
+            android:name=".noti.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".noti.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

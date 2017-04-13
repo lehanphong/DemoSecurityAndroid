@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "554939249975",
+    "firebase_url": "https://demonotification-70c1f.firebaseio.com",
+    "project_id": "demonotification-70c1f",
+    "storage_bucket": "demonotification-70c1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554939249975:android:bf6af7ee344b40b4",
+        "android_client_info": {
+          "package_name": "lhp.ducnt.demonotisecurity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554939249975-fi5vlmff250u1ra45s27u3h2ludr9fia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lhp.ducnt.demonotisecurity",
+            "certificate_hash": "509dc91b28833519c954b42cdd02e8d9e5bca8c8"
+          }
+        },
+        {
+          "client_id": "554939249975-aq4m6bkvvous6o0til40g5kkdma7pd35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASm6x0zT3TS53e7sDfCIk_vbeC3j2wg0Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554939249975-aq4m6bkvvous6o0til40g5kkdma7pd35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554939249975:android:17a154368ba9cd1e",
+        "android_client_info": {
+          "package_name": "lhp.ducnt.demosecurityactivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554939249975-50fugjhtuudu5alss247vq3v3nfcun1p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lhp.ducnt.demosecurityactivity",
+            "certificate_hash": "509dc91b28833519c954b42cdd02e8d9e5bca8c8"
+          }
+        },
+        {
+          "client_id": "554939249975-aq4m6bkvvous6o0til40g5kkdma7pd35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASm6x0zT3TS53e7sDfCIk_vbeC3j2wg0Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554939249975-aq4m6bkvvous6o0til40g5kkdma7pd35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

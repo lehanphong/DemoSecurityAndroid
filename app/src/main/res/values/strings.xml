@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DemoSecurityActivity</string>
+    <string name="title_login">Login</string>
+    <string name="content_login">Use Your Account</string>
+    <string name="Sussess">Đăng ký thành công!</string>
+    <string name="UserName">Username</string>
+    <string name="Password">Password</string>
+    <string name="Login">Login</string>
+    <string name="ERROR_01">Login chưa thành công, vui lòng thử lại!</string>
+</resources>
